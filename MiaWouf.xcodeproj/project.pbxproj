@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		FAFACBE2221AF627002B9D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACBE1221AF627002B9D53 /* AppDelegate.swift */; };
-		FAFACBE4221AF627002B9D53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACBE3221AF627002B9D53 /* ViewController.swift */; };
 		FAFACBE7221AF627002B9D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFACBE5221AF627002B9D53 /* Main.storyboard */; };
 		FAFACBE9221AF62A002B9D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFACBE8221AF62A002B9D53 /* Assets.xcassets */; };
 		FAFACBEC221AF62A002B9D53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFACBEA221AF62A002B9D53 /* LaunchScreen.storyboard */; };
+		FAFACBF6221AF84B002B9D53 /* Races.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACBF5221AF84B002B9D53 /* Races.swift */; };
+		FAFACBFD221B071A002B9D53 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACBFC221B071A002B9D53 /* WelcomeViewController.swift */; };
+		FAFACBFF221B0A92002B9D53 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACBFE221B0A92002B9D53 /* FormViewController.swift */; };
+		FAFACC01221B0DC9002B9D53 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACC00221B0DC9002B9D53 /* SuccessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FAFACBDE221AF627002B9D53 /* MiaWouf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiaWouf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFACBE1221AF627002B9D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAFACBE3221AF627002B9D53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAFACBE6221AF627002B9D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAFACBE8221AF62A002B9D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAFACBEB221AF62A002B9D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAFACBED221AF62A002B9D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFACBF5221AF84B002B9D53 /* Races.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Races.swift; sourceTree = "<group>"; };
+		FAFACBFC221B071A002B9D53 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		FAFACBFE221B0A92002B9D53 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		FAFACC00221B0DC9002B9D53 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		FAFACBE0221AF627002B9D53 /* MiaWouf */ = {
 			isa = PBXGroup;
 			children = (
-				FAFACBE1221AF627002B9D53 /* AppDelegate.swift */,
-				FAFACBE3221AF627002B9D53 /* ViewController.swift */,
-				FAFACBE5221AF627002B9D53 /* Main.storyboard */,
-				FAFACBE8221AF62A002B9D53 /* Assets.xcassets */,
-				FAFACBEA221AF62A002B9D53 /* LaunchScreen.storyboard */,
-				FAFACBED221AF62A002B9D53 /* Info.plist */,
+				FAFACBFA221B0118002B9D53 /* Controller */,
+				FAFACBF9221B0105002B9D53 /* View */,
+				FAFACBF8221B00FA002B9D53 /* Model */,
+				FAFACBFB221B0127002B9D53 /* Supporting Files */,
 			);
 			path = MiaWouf;
+			sourceTree = "<group>";
+		};
+		FAFACBF8221B00FA002B9D53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAFACBF5221AF84B002B9D53 /* Races.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAFACBF9221B0105002B9D53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAFACBE5221AF627002B9D53 /* Main.storyboard */,
+				FAFACBEA221AF62A002B9D53 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAFACBFA221B0118002B9D53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAFACBFE221B0A92002B9D53 /* FormViewController.swift */,
+				FAFACBFC221B071A002B9D53 /* WelcomeViewController.swift */,
+				FAFACC00221B0DC9002B9D53 /* SuccessViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAFACBFB221B0127002B9D53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAFACBE1221AF627002B9D53 /* AppDelegate.swift */,
+				FAFACBE8221AF62A002B9D53 /* Assets.xcassets */,
+				FAFACBED221AF62A002B9D53 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAFACBE4221AF627002B9D53 /* ViewController.swift in Sources */,
+				FAFACBFD221B071A002B9D53 /* WelcomeViewController.swift in Sources */,
 				FAFACBE2221AF627002B9D53 /* AppDelegate.swift in Sources */,
+				FAFACBFF221B0A92002B9D53 /* FormViewController.swift in Sources */,
+				FAFACC01221B0DC9002B9D53 /* SuccessViewController.swift in Sources */,
+				FAFACBF6221AF84B002B9D53 /* Races.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +328,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 529LRG4ZS2;
-				INFOPLIST_FILE = MiaWouf/Info.plist;
+				INFOPLIST_FILE = "MiaWouf/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +337,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.alexandreholet.MiaWouf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +347,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 529LRG4ZS2;
-				INFOPLIST_FILE = MiaWouf/Info.plist;
+				INFOPLIST_FILE = "MiaWouf/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.alexandreholet.MiaWouf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

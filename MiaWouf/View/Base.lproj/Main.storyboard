@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qR3-Kp-B82">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="yVP-fx-ZCW">
+            <objects>
+                <navigationController id="qR3-Kp-B82" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bf0-gv-HY8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.63137254901960782" green="0.33333333333333331" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.33725490196078434" green="0.68627450980392157" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="714-d7-BUW" kind="relationship" relationship="rootViewController" id="Nwv-Xb-BRC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BlY-Z5-f5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-670" y="138"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="ZHQ-mq-PUN">
+            <objects>
+                <viewController id="714-d7-BUW" customClass="WelcomeViewController" customModule="MiaWouf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3e3-AD-dMo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MiaWouf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cuo-jD-uoU">
+                                <rect key="frame" x="127" y="84" width="121" height="38"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="30"/>
+                                <color key="textColor" red="0.33725490196078434" green="0.68627450980392157" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dX-ON-8Yc">
+                                <rect key="frame" x="66.5" y="305.5" width="242" height="229"/>
+                                <state key="normal" image="Paw"/>
+                                <connections>
+                                    <segue destination="RTT-OC-af6" kind="show" id="XVi-ND-cch"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82745098039215681" green="0.93725490196078431" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2dX-ON-8Yc" firstAttribute="top" secondItem="LLz-FY-uhT" secondAttribute="centerY" constant="-60" id="01Y-8z-iCZ"/>
+                            <constraint firstItem="Cuo-jD-uoU" firstAttribute="top" secondItem="LLz-FY-uhT" secondAttribute="top" constant="20" id="jpk-GO-lBw"/>
+                            <constraint firstItem="2dX-ON-8Yc" firstAttribute="centerX" secondItem="3e3-AD-dMo" secondAttribute="centerX" id="lqs-HG-TKH"/>
+                            <constraint firstItem="Cuo-jD-uoU" firstAttribute="centerX" secondItem="3e3-AD-dMo" secondAttribute="centerX" id="qzX-Iu-WLh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LLz-FY-uhT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="wgU-Zo-sXz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Pv-9H-W66" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79" y="137"/>
+        </scene>
+        <!--Form View Controller-->
+        <scene sceneID="Of9-8V-Dv6">
+            <objects>
+                <viewController id="RTT-OC-af6" customClass="FormViewController" customModule="MiaWouf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zhK-al-JtA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkY-Pk-7lF">
+                                <rect key="frame" x="20" y="602" width="335" height="45"/>
+                                <color key="backgroundColor" red="0.63137254901960782" green="0.33333333333333331" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Valider">
+                                    <color key="titleColor" red="0.33725490196078434" green="0.68627450980392157" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="j4v-Pt-bhq" kind="presentation" id="Yel-h5-zlf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82745098039215681" green="0.93725490196078431" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8gs-12-uSv" firstAttribute="trailing" secondItem="AkY-Pk-7lF" secondAttribute="trailing" constant="20" id="ErK-oX-GeC"/>
+                            <constraint firstItem="8gs-12-uSv" firstAttribute="bottom" secondItem="AkY-Pk-7lF" secondAttribute="bottom" constant="20" id="dkq-Cs-Ujx"/>
+                            <constraint firstItem="AkY-Pk-7lF" firstAttribute="leading" secondItem="8gs-12-uSv" secondAttribute="leading" constant="20" id="lsx-Gz-R0V"/>
+                            <constraint firstItem="AkY-Pk-7lF" firstAttribute="centerX" secondItem="zhK-al-JtA" secondAttribute="centerX" id="nsb-0s-h5I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8gs-12-uSv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="34n-9G-wkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="130"/>
+        </scene>
+        <!--Success View Controller-->
+        <scene sceneID="clR-qg-qyI">
+            <objects>
+                <viewController id="j4v-Pt-bhq" customClass="SuccessViewController" customModule="MiaWouf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1D3-1R-bhr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxa-pe-2Hu">
+                                <rect key="frame" x="20" y="40" width="335" height="607"/>
+                                <string key="text">Wouf !
+
+Vous avez bien été ajouté à notre base de données ! Nous vous contacterons par SMS quand nous aurons trouvé votre âme soeur.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.68627450980000004" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82745098039215681" green="0.93725490196078431" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uxa-pe-2Hu" firstAttribute="top" secondItem="MiQ-D1-L78" secondAttribute="top" constant="20" id="0KZ-iE-Xza"/>
+                            <constraint firstItem="MiQ-D1-L78" firstAttribute="bottom" secondItem="uxa-pe-2Hu" secondAttribute="bottom" constant="20" id="1Ef-FV-JIm"/>
+                            <constraint firstAttribute="trailing" secondItem="uxa-pe-2Hu" secondAttribute="trailing" constant="20" id="Wei-dS-uqA"/>
+                            <constraint firstItem="uxa-pe-2Hu" firstAttribute="leading" secondItem="MiQ-D1-L78" secondAttribute="leading" constant="20" id="drV-0T-Ph8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MiQ-D1-L78"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOA-j1-4dD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850" y="-603"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Paw" width="242" height="229"/>
+    </resources>
+</document>
