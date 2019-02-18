@@ -15,6 +15,9 @@
 		FAFACBFD221B071A002B9D53 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACBFC221B071A002B9D53 /* WelcomeViewController.swift */; };
 		FAFACBFF221B0A92002B9D53 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACBFE221B0A92002B9D53 /* FormViewController.swift */; };
 		FAFACC01221B0DC9002B9D53 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACC00221B0DC9002B9D53 /* SuccessViewController.swift */; };
+		FAFACC03221B20F9002B9D53 /* CatWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACC02221B20F9002B9D53 /* CatWelcomeViewController.swift */; };
+		FAFACC05221B39EE002B9D53 /* CatFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACC04221B39EE002B9D53 /* CatFormViewController.swift */; };
+		FAFACC07221B3A1B002B9D53 /* CatSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACC06221B3A1B002B9D53 /* CatSuccessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		FAFACBFC221B071A002B9D53 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FAFACBFE221B0A92002B9D53 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		FAFACC00221B0DC9002B9D53 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		FAFACC02221B20F9002B9D53 /* CatWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatWelcomeViewController.swift; sourceTree = "<group>"; };
+		FAFACC04221B39EE002B9D53 /* CatFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFormViewController.swift; sourceTree = "<group>"; };
+		FAFACC06221B3A1B002B9D53 /* CatSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSuccessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,9 @@
 				FAFACBFE221B0A92002B9D53 /* FormViewController.swift */,
 				FAFACBFC221B071A002B9D53 /* WelcomeViewController.swift */,
 				FAFACC00221B0DC9002B9D53 /* SuccessViewController.swift */,
+				FAFACC02221B20F9002B9D53 /* CatWelcomeViewController.swift */,
+				FAFACC04221B39EE002B9D53 /* CatFormViewController.swift */,
+				FAFACC06221B3A1B002B9D53 /* CatSuccessViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,10 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAFACBFD221B071A002B9D53 /* WelcomeViewController.swift in Sources */,
+				FAFACC07221B3A1B002B9D53 /* CatSuccessViewController.swift in Sources */,
 				FAFACBE2221AF627002B9D53 /* AppDelegate.swift in Sources */,
+				FAFACC03221B20F9002B9D53 /* CatWelcomeViewController.swift in Sources */,
 				FAFACBFF221B0A92002B9D53 /* FormViewController.swift in Sources */,
 				FAFACC01221B0DC9002B9D53 /* SuccessViewController.swift in Sources */,
 				FAFACBF6221AF84B002B9D53 /* Races.swift in Sources */,
+				FAFACC05221B39EE002B9D53 /* CatFormViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  SuccessViewController.swift
+//  CatFormViewController.swift
 //  MiaWouf
 //
 //  Created by Alex on 18/02/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SuccessViewController: UIViewController {
+class CatFormViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,10 +16,7 @@ class SuccessViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func dismiss() {
-        dismiss(animated: true, completion: nil)
-    }
-    
+
     /*
     // MARK: - Navigation
 
