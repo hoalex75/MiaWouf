@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FABB9A93221CA0E300D131E0 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB9A92221CA0E300D131E0 /* Pet.swift */; };
 		FAFACBE2221AF627002B9D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFACBE1221AF627002B9D53 /* AppDelegate.swift */; };
 		FAFACBE7221AF627002B9D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFACBE5221AF627002B9D53 /* Main.storyboard */; };
 		FAFACBE9221AF62A002B9D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFACBE8221AF62A002B9D53 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FABB9A92221CA0E300D131E0 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		FAFACBDE221AF627002B9D53 /* MiaWouf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiaWouf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFACBE1221AF627002B9D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFACBE6221AF627002B9D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				FAFACBF5221AF84B002B9D53 /* Races.swift */,
+				FABB9A92221CA0E300D131E0 /* Pet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				FAFACBFD221B071A002B9D53 /* WelcomeViewController.swift in Sources */,
 				FAFACC07221B3A1B002B9D53 /* CatSuccessViewController.swift in Sources */,
 				FAFACBE2221AF627002B9D53 /* AppDelegate.swift in Sources */,
+				FABB9A93221CA0E300D131E0 /* Pet.swift in Sources */,
 				FAFACC03221B20F9002B9D53 /* CatWelcomeViewController.swift in Sources */,
 				FAFACBFF221B0A92002B9D53 /* FormViewController.swift in Sources */,
 				FAFACC01221B0DC9002B9D53 /* SuccessViewController.swift in Sources */,

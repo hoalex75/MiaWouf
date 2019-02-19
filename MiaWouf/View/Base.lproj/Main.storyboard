@@ -243,6 +243,9 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue" textContentType="nickname"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="RTT-OC-af6" id="eac-WO-sbI"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -296,7 +299,10 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                                                                 <rect key="frame" x="167.5" y="0.0" width="167.5" height="31"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="continue" textContentType="tel"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="continue" textContentType="tel"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="RTT-OC-af6" id="Bhc-GU-Zmt"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -316,6 +322,10 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="zkK-6g-a5H" secondAttribute="height" multiplier="40:27" id="LxO-tK-CkY"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="RTT-OC-af6" id="Txz-34-NeC"/>
+                                                            <outlet property="delegate" destination="RTT-OC-af6" id="Pgu-sk-f4W"/>
+                                                        </connections>
                                                     </pickerView>
                                                 </subviews>
                                             </stackView>
@@ -346,6 +356,7 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.82745098039215681" green="0.93725490196078431" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="8gs-12-uSv" firstAttribute="trailing" secondItem="kZM-gr-5WT" secondAttribute="trailing" constant="20" id="0ci-d1-bsh"/>
                             <constraint firstItem="kZM-gr-5WT" firstAttribute="leading" secondItem="8gs-12-uSv" secondAttribute="leading" constant="20" id="NxQ-KU-4fR"/>
@@ -353,9 +364,21 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                             <constraint firstItem="8gs-12-uSv" firstAttribute="bottom" secondItem="kZM-gr-5WT" secondAttribute="bottom" constant="20" id="qGt-0s-jqt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8gs-12-uSv"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="GEX-Io-WqQ" appends="YES" id="duq-1w-GFX"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="b6B-Km-rRj" id="Ew1-1K-PbV"/>
+                        <outlet property="phoneTextField" destination="j62-Uz-ZmE" id="CpG-LG-dq0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34n-9G-wkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GEX-Io-WqQ">
+                    <connections>
+                        <action selector="dismissKeyboards:" destination="RTT-OC-af6" id="WNi-ud-VLF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="849.27536231884062" y="129.61956521739131"/>
         </scene>
