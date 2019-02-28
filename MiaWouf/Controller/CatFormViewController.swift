@@ -8,23 +8,49 @@
 
 import UIKit
 
-class CatFormViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class CatFormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var sex: UISegmentedControl!
+    @IBOutlet weak var majoritySwitch: UISwitch!
+    @IBOutlet weak var phone: UITextField!
+    @IBOutlet weak var racePicker: UIPickerView!
+    
+    @IBAction func validate() {
+        createPetObject()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        nameTextField.resignFirstResponder()
+        phone.resignFirstResponder()
     }
-    */
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return catRaces.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return catRaces[row]
+    }
 
+    private func createPetObject() {
+        let name = nameTextField.text
+        let phone = self.phone.text
+        let majority = majoritySwitch.isOn
+        let genderIndex = sex.selectedSegmentIndex
+        let gender : Pet .Gender = genderIndex == 0 ? .male : .female
+        let raceIndex = racePicker.selectedRow(inComponent: 0)
+        let race = dogRaces[raceIndex]
+        
+        let cat = Pet( name: name, hasMajority: majority, phone: phone, race: race, gender: gender)
+        
+    }
 }

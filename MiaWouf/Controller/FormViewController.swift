@@ -12,6 +12,9 @@ class FormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var genderSegmented: UISegmentedControl!
+    @IBOutlet weak var majoritySwitch: UISwitch!
+    @IBOutlet weak var racePicker: UIPickerView!
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -31,8 +34,24 @@ class FormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         return true
     }
     
+    @IBAction func validateForm() {
+        createPetObject()
+    }
     @IBAction func dismissKeyboards(_ sender: UITapGestureRecognizer) {
         nameTextField.resignFirstResponder()
         phoneTextField.resignFirstResponder()
+    }
+    
+    private func createPetObject() {
+        let name = nameTextField.text
+        let phone = phoneTextField.text
+        let majority = majoritySwitch.isOn
+        let genderIndex = genderSegmented.selectedSegmentIndex
+        let gender : Pet .Gender = genderIndex == 0 ? .male : .female
+        let raceIndex = racePicker.selectedRow(inComponent: 0)
+        let race = dogRaces[raceIndex]
+        
+        let dog = Pet( name: name, hasMajority: majority, phone: phone, race: race, gender: gender)
+        
     }
 }
