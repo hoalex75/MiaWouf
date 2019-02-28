@@ -374,6 +374,7 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                         <outlet property="nameTextField" destination="b6B-Km-rRj" id="Ew1-1K-PbV"/>
                         <outlet property="phoneTextField" destination="j62-Uz-ZmE" id="CpG-LG-dq0"/>
                         <outlet property="racePicker" destination="zkK-6g-a5H" id="M29-rE-gNw"/>
+                        <segue destination="j4v-Pt-bhq" kind="presentation" identifier="segueToSuccess" id="sg5-4e-HeW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34n-9G-wkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -445,6 +446,9 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MiQ-D1-L78"/>
                     </view>
+                    <connections>
+                        <outlet property="successTextView" destination="uxa-pe-2Hu" id="6uD-lm-IxE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOA-j1-4dD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4Hj-hc-xaQ" userLabel="Exit" sceneMemberID="exit"/>
@@ -478,7 +482,7 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                                                         <rect key="frame" x="0.0" y="29" width="335" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="nickname"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue" textContentType="nickname"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="eeI-4L-fPg" id="ulo-uV-n8E"/>
                                                         </connections>

@@ -9,7 +9,7 @@
 import UIKit
 
 class FormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
-    
+    var dog: Pet!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var genderSegmented: UISegmentedControl!
@@ -36,10 +36,34 @@ class FormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBAction func validateForm() {
         createPetObject()
+        checkStatuts()
     }
     @IBAction func dismissKeyboards(_ sender: UITapGestureRecognizer) {
         nameTextField.resignFirstResponder()
         phoneTextField.resignFirstResponder()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToSuccess" {
+            let successVC = segue.destination as! SuccessViewController
+            successVC.dog = dog
+        }
+    }
+    
+    private func checkStatuts() {
+        switch dog.status {
+        case .accepted:
+            performSegue(withIdentifier: "segueToSuccess", sender: self)
+        case .rejected(let error):
+            createAndDisplayAlert(error: error)
+        }
+    }
+    
+    private func createAndDisplayAlert(error: String){
+        let alertVC = UIAlertController(title: "Erreur", message: error, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertVC.addAction(action)
+        present(alertVC, animated: true, completion: nil)
     }
     
     private func createPetObject() {
@@ -51,7 +75,7 @@ class FormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let raceIndex = racePicker.selectedRow(inComponent: 0)
         let race = dogRaces[raceIndex]
         
-        let dog = Pet( name: name, hasMajority: majority, phone: phone, race: race, gender: gender)
+        dog = Pet( name: name, hasMajority: majority, phone: phone, race: race, gender: gender)
         
     }
 }
