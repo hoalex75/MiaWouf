@@ -209,6 +209,9 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                         <viewLayoutGuide key="safeArea" id="b9d-Hf-yLb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat" image="Cat" id="zA2-cv-YKr"/>
+                    <connections>
+                        <outlet property="text" destination="btv-BT-NdB" id="lSx-cZ-6bR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIx-sU-O9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fPp-Na-hrn" userLabel="Exit" sceneMemberID="exit"/>
@@ -531,7 +534,7 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v49-X3-2EX" userLabel="switch + textfield">
                                                         <rect key="frame" x="0.0" y="24" width="335" height="31"/>
                                                         <subviews>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7lj-aC-7V0">
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7lj-aC-7V0">
                                                                 <rect key="frame" x="0.0" y="0.0" width="169.5" height="31"/>
                                                                 <color key="onTintColor" red="0.33725490200000002" green="0.68627450980000004" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </switch>
@@ -605,6 +608,7 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                         <outlet property="phone" destination="X6S-ym-uBk" id="42O-He-M8I"/>
                         <outlet property="racePicker" destination="o1f-ke-bXO" id="uGY-M5-S4n"/>
                         <outlet property="sex" destination="l8K-mv-Iqf" id="Ftp-Gd-GQg"/>
+                        <segue destination="gh6-Pj-cdy" kind="presentation" identifier="segueToCatSuccess" id="Ch4-o6-04i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lS3-hW-dEd" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,11 +9,16 @@
 import UIKit
 
 class CatSuccessViewController: UIViewController {
-
+    var cat: Pet!
+    @IBOutlet weak var text: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        text.text = createText()
+        let font = UIFont.systemFont(ofSize: 60)
+        text.font = font
+        text.adjustsFontSizeToFitWidth = true
+        text.minimumScaleFactor = 0.2
     }
     
 
@@ -21,14 +26,12 @@ class CatSuccessViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func createText() -> String {
+        var textToWrite = "Miaou de Bienvenue à\n"
+        textToWrite += "\(cat.name!)\n"
+        textToWrite += "Vous avez bien été ajouté à notre base de données ! Nous vous contacterons par SMS quand nous aurons trouvé votre âme soeur."
+        
+        return textToWrite
     }
-    */
 
 }

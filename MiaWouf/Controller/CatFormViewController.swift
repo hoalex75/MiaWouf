@@ -14,9 +14,11 @@ class CatFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var majoritySwitch: UISwitch!
     @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var racePicker: UIPickerView!
+    var cat: Pet!
     
     @IBAction func validate() {
         createPetObject()
+        checkStatuts()
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
@@ -41,6 +43,25 @@ class CatFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return catRaces[row]
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToCatSuccess" {
+           let successVC = segue.destination as! CatSuccessViewController
+           successVC.cat = cat
+        }
+    }
+    
+    private func checkStatuts() {
+        switch cat.status {
+        case .accepted:
+            performSegue(withIdentifier: "segueToCatSuccess", sender: self)
+        case .rejected(let error):
+            let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+            let actionAlert = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            alert.addAction(actionAlert)
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
     private func createPetObject() {
         let name = nameTextField.text
         let phone = self.phone.text
@@ -50,7 +71,7 @@ class CatFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let raceIndex = racePicker.selectedRow(inComponent: 0)
         let race = dogRaces[raceIndex]
         
-        let cat = Pet( name: name, hasMajority: majority, phone: phone, race: race, gender: gender)
+        cat = Pet( name: name, hasMajority: majority, phone: phone, race: race, gender: gender)
         
     }
 }
