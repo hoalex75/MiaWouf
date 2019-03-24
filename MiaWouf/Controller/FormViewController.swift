@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class FormViewController: UIViewController {
     var dog: Pet!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
@@ -17,31 +17,11 @@ class FormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var racePicker: UIPickerView!
     
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dogRaces.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return dogRaces[row]
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
     @IBAction func validateForm() {
         createPetObject()
         checkStatuts()
     }
-    @IBAction func dismissKeyboards(_ sender: UITapGestureRecognizer) {
-        nameTextField.resignFirstResponder()
-        phoneTextField.resignFirstResponder()
-    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToSuccess" {
@@ -77,5 +57,31 @@ class FormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         
         dog = Pet( name: name, hasMajority: majority, phone: phone, race: race, gender: gender)
         
+    }
+}
+
+extension FormViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return dogRaces.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return dogRaces[row]
+    }
+}
+
+extension FormViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @IBAction func dismissKeyboards(_ sender: UITapGestureRecognizer) {
+        nameTextField.resignFirstResponder()
+        phoneTextField.resignFirstResponder()
     }
 }

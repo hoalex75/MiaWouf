@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CatFormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class CatFormViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var sex: UISegmentedControl!
     @IBOutlet weak var majoritySwitch: UISwitch!
@@ -20,28 +20,6 @@ class CatFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         createPetObject()
         checkStatuts()
     }
-    
-    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        nameTextField.resignFirstResponder()
-        phone.resignFirstResponder()
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return catRaces.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return catRaces[row]
-    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToCatSuccess" {
@@ -49,7 +27,10 @@ class CatFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
            successVC.cat = cat
         }
     }
-    
+}
+
+// to verify the form and create the Cat
+extension CatFormViewController {
     private func checkStatuts() {
         switch cat.status {
         case .accepted:
@@ -73,5 +54,31 @@ class CatFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         cat = Pet( name: name, hasMajority: majority, phone: phone, race: race, gender: gender)
         
+    }
+}
+
+extension CatFormViewController: UITextFieldDelegate {
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        nameTextField.resignFirstResponder()
+        phone.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+extension CatFormViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return catRaces.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return catRaces[row]
     }
 }
