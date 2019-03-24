@@ -466,11 +466,22 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkx-lx-tKe">
+                                <rect key="frame" x="20" y="568" width="335" height="45"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.33333333329999998" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Valider">
+                                    <color key="titleColor" red="0.33725490200000002" green="0.68627450980000004" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="validate" destination="eeI-4L-fPg" eventType="touchUpInside" id="7no-8E-Aoa"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpe-2E-ZYK">
-                                <rect key="frame" x="20" y="79" width="335" height="524"/>
+                                <rect key="frame" x="20" y="79" width="335" height="489"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NIx-F4-KNQ" userLabel="General">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="546.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="481.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1ul-BU-XRW" userLabel="Nom">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="59"/>
@@ -566,17 +577,6 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                                                     </pickerView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkx-lx-tKe">
-                                                <rect key="frame" x="0.0" y="501.5" width="335" height="45"/>
-                                                <color key="backgroundColor" red="0.63137254899999995" green="0.33333333329999998" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <state key="normal" title="Valider">
-                                                    <color key="titleColor" red="0.33725490200000002" green="0.68627450980000004" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="validate" destination="eeI-4L-fPg" eventType="touchUpInside" id="7no-8E-Aoa"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -592,10 +592,13 @@ Vous avez bien été ajouté à notre base de données ! Nous vous contacterons 
                         <color key="backgroundColor" red="0.82745098039999998" green="0.93725490199999995" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="fkx-lx-tKe" firstAttribute="top" secondItem="Kpe-2E-ZYK" secondAttribute="bottom" id="9Gv-gj-RGx"/>
                             <constraint firstItem="Kpe-2E-ZYK" firstAttribute="top" secondItem="F1p-ax-Lmv" secondAttribute="top" constant="15" id="AkI-at-CDX"/>
                             <constraint firstItem="Kpe-2E-ZYK" firstAttribute="leading" secondItem="F1p-ax-Lmv" secondAttribute="leading" constant="20" id="IAH-Oe-ZPl"/>
                             <constraint firstItem="F1p-ax-Lmv" firstAttribute="trailing" secondItem="Kpe-2E-ZYK" secondAttribute="trailing" constant="20" id="Nh2-mq-qyE"/>
-                            <constraint firstItem="F1p-ax-Lmv" firstAttribute="bottom" secondItem="Kpe-2E-ZYK" secondAttribute="bottom" constant="15" id="u9R-E9-17E"/>
+                            <constraint firstItem="F1p-ax-Lmv" firstAttribute="trailing" secondItem="fkx-lx-tKe" secondAttribute="trailing" constant="20" id="hrl-1K-6xw"/>
+                            <constraint firstItem="F1p-ax-Lmv" firstAttribute="bottom" secondItem="fkx-lx-tKe" secondAttribute="bottom" constant="5" id="jdR-P7-mfY"/>
+                            <constraint firstItem="fkx-lx-tKe" firstAttribute="leading" secondItem="F1p-ax-Lmv" secondAttribute="leading" constant="20" id="p8Y-uW-Wfl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F1p-ax-Lmv"/>
                         <connections>
